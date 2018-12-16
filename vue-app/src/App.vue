@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <!-- <img alt="Vue logo" src="../../static/logo.png"> -->
+    <img alt="Vue logo" :src="logoURL">
     <div v-for="post in postData" :key="post.id">
       {{ post.title.rendered }}
     </div>
@@ -11,10 +13,12 @@ export default {
   data () {
     return {
       postData: [],
+      logoURL: '',
       // wpData: wpData //uncomment this when building for production
     }
   },
-  mounted () {
+  created () {
+    this.logoURL = this.wpData !== undefined ? `${this.wpData.template_directory_uri}/assets/logo.png` : 'http://localhost:8888/wp-content/themes/vue-wordpress/assets/logo.png'
     const restURL = this.wpData !== undefined ? this.wpData.rest_url : 'http://localhost:8888/wp-json'
     fetch(`${restURL}/wp/v2/posts`)
       .then((response) => response.json())
