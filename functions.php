@@ -1,21 +1,83 @@
 <?php
 // Remove all default WP template redirects/lookups
-remove_action('template_redirect', 'redirect_canonical');
+remove_action( 'template_redirect', 'redirect_canonical' );
 
 // Redirect all requests to index.php so the Vue app is loaded and 404s aren't thrown
 function remove_redirects() {
-    add_rewrite_rule('^/(.+)/?', 'index.php', 'top');
+	add_rewrite_rule( '^/(.+)/?', 'index.php', 'top' );
 }
-add_action('init', 'remove_redirects');
 
-// includes for the callbacks.
-include_once( get_stylesheet_directory() . '/includes/enqueue-scripts.php' );
-include_once( get_stylesheet_directory() . '/includes/extend-api.php' );
+add_action( 'init', 'remove_redirects' );
 
-/* hooks and filters */
+// Load Vue scripts
+function load_vue_scripts() {
+	wp_enqueue_script(
+		'vuejs-wordpress-theme-starter-js',
+		get_stylesheet_directory_uri() . '/dist/scripts/index.min.bundle.js',
+		array( 'jquery' ),
+		filemtime( get_stylesheet_directory() . '/dist/scripts/index.min.bundle.js' ),
+		true
+	);
 
-// enqueue-scripts.php.
-add_action( 'wp_enqueue_scripts', 'vue_wordpress_enqueue_scripts' );
+	wp_enqueue_style(
+		'vuejs-wordpress-theme-starter-css',
+		get_stylesheet_directory_uri() . '/dist/styles.css',
+		null,
+		filemtime( get_stylesheet_directory() . '/dist/styles.css' )
+	);
+}
 
-// extend-api.php.
-add_action( 'rest_api_init', 'vue_wordpress_extend_api_response' );
+add_action( 'wp_enqueue_scripts', 'load_vue_scripts', 100 );
+
+// Misc Settings
+add_filter( 'show_admin_bar', '__return_false' );
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
+// ACF Plugin
+add_filter( 'acf/settings/path', 'my_acf_settings_path' );
+
+function my_acf_settings_path( $path ) {
+	$path = get_stylesheet_directory() . '/plugins/acf/';
+	return $path;
+}
+
+add_filter( 'acf/settings/dir', 'my_acf_settings_dir' );
+add_filter('acf/settings/show_admin', '__return_false');
+
+function my_acf_settings_dir( $dir ) {
+	$dir = get_stylesheet_directory_uri() . '/plugins/acf/';
+	return $dir;
+}
+
+include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );
+
+// ACF-To-REST-API Plugin
+include_once( get_stylesheet_directory() . '/plugins/acf-to-rest-api/class-acf-to-rest-api.php' );
+
+if( function_exists('acf_add_local_field_group') ):
+
+	acf_add_local_field_group(array(
+		'key' => 'group_1',
+		'title' => 'My Group',
+		'fields' => array (
+			array (
+				'key' => 'field_1',
+				'label' => 'Sub Title',
+				'name' => 'sub_title',
+				'type' => 'text',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+				),
+			),
+		),
+	));
+	
+endif;
