@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   extends: [
     'plugin:vue/essential',
@@ -10,9 +10,9 @@ module.exports = {
   rules: {
     semi: [2, 'always'],
     'comma-dangle': [2, 'always-multiline'],
-    'no-new': [2, 'never'],
+    'no-new': [0, 'never'],
   },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
+    parser: 'babel-eslint',
+  },
 };

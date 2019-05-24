@@ -1,6 +1,7 @@
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -19,9 +20,6 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the 'scss' and 'sass' values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
             scss: 'vue-style-loader!css-loader!sass-loader',
             sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
           },
@@ -34,36 +32,25 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              [
-                'env',
-                {
-                  targets: {
-                    browsers: [
-                      'Chrome >= 52',
-                      'FireFox >= 44',
-                      'Safari >= 7',
-                      'Explorer 11',
-                      'last 4 Edge versions',
-                    ],
-                  },
-                  useBuiltIns: true,
-                },
-              ],
-              'stage-2',
+              '@babel/preset-env',
+            ],
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
             ],
           },
         },
       },
       {
         test: /\.css$/,
-        use: [ 'vue-style-loader', 'css-loader' ]
-        // use: ExtractTextPlugin.extract({
-        //   fallback: 'style-loader',
-        //   use: [
-        //     { loader: 'css-loader', options: { importLoaders: 1 } },
-        //     'postcss-loader',
-        //   ],
-        // }),
+        use: [ 'vue-style-loader', 'css-loader' ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -92,16 +79,11 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js',
     },
   },
+  optimization: {
+    minimizer: [new UglifyJsPlugin()],
+  },
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   throttle: 'lodash.throttle',
-    // }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   include: /\.min\.bundle\.js$/,
-    //   minimize: true,
-    //   ecma: 8,
-    // }),
+    new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: true }),
-    // new ExtractTextPlugin('styles.css'),
   ],
 };

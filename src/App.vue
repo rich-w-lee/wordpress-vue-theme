@@ -1,6 +1,8 @@
 <template>
   <div>
-    {{ postData }}
+    <div>
+      {{ postData }}
+    </div>
   </div>
 </template>
 

@@ -53,9 +53,7 @@ function my_acf_settings_dir( $dir ) {
 
 include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );
 
-// ACF-To-REST-API Plugin
-include_once( get_stylesheet_directory() . '/plugins/acf-to-rest-api/class-acf-to-rest-api.php' );
-
+// Custom ACF fields used by theme
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
@@ -81,3 +79,7 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 	
 endif;
+
+// ACF-To-REST-API Plugin
+include_once( get_stylesheet_directory() . '/plugins/acf-to-rest-api/class-acf-to-rest-api.php' );
+
