@@ -55,31 +55,51 @@ include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );
 
 // Custom ACF fields used by theme
 if( function_exists('acf_add_local_field_group') ):
+	function get_local_file_contents( $file_path ) {
+    ob_start();
+    include $file_path;
+    $contents = ob_get_clean();
 
-	acf_add_local_field_group(array(
-		'key' => 'group_1',
-		'title' => 'My Group',
-		'fields' => array (
-			array (
-				'key' => 'field_1',
-				'label' => 'Sub Title',
-				'name' => 'sub_title',
-				'type' => 'text',
-			)
-		),
-		'location' => array (
-			array (
+    return $contents;
+	}
+	$fields_file = get_local_file_contents('acf_fields.json');
+	$fields_json = json_decode($fields_file, true);
+
+	foreach ($fields_json as $k => $v) {
+		$acf_fields = array();
+		$groupName = $v["groupName"];
+		$groupKey = $v["groupKey"];			
+		$fields = $v["fields"];
+		
+		foreach ($fields as $fieldK => $fieldV) {
+			$fieldKey = $fieldV["fieldKey"];
+			$fieldType = $fieldV["type"];
+			$fieldLabel = $fieldV["fieldLabel"];
+			array_push($acf_fields, array(
+				'key' => $fieldKey,
+				'label' => $fieldLabel,
+				'name' => $fieldKey,
+				'type' => $fieldType,
+			));
+		}
+
+		acf_add_local_field_group(array(
+			'key' => $groupKey,
+			'title' => $groupName,
+			'fields' => $acf_fields,
+			'location' => array (
 				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'post',
+					array (
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'post',
+					),
 				),
-			),
-		),
-	));
-	
+			),e
+		));
+	}
+
 endif;
 
 // ACF-To-REST-API Plugin
 include_once( get_stylesheet_directory() . '/plugins/acf-to-rest-api/class-acf-to-rest-api.php' );
-

@@ -1,0 +1,13 @@
+[
+  {
+    "groupName": "ThemeData",
+    "groupKey": "themeData",
+    "fields": [
+      {
+        "fieldLabel": "fieldLabel",
+        "fieldKey": "testField",
+        "type": "text"
+      }
+    ]
+  }
+]
