@@ -62,3 +62,11 @@ In each field group there is a `fields` property, which is also an Array of Obje
 ]
 ```
 **Note**: There are preset values that ACF recognizes. Please look at their [documentation](https://www.advancedcustomfields.com/resources/#field-types) for more information.
+
+### Shoutouts
+
+Special thanks to Evan Agee, [your template](https://github.com/EvanAgee/vuejs-wordpress-theme-starter) helped me with this one.
+
+### Learning Vue
+
+If you're interested in Vue, I heavily recommend Maximilian Schwarzmüller's [course on Udemy](https://www.udemy.com/vuejs-2-the-complete-guide/). It's ~$10, but make sure you open it in an incognito browser because it will be "on sale". If you have cookies it will bump it up to ~$200.
