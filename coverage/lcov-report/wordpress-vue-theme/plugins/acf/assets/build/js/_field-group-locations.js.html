@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for wordpress-vue-theme/plugins/acf/assets/build/js/_field-group-locations.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">wordpress-vue-theme/plugins/acf/assets/build/js</a> _field-group-locations.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function(</span>$, undefined){</span>
+	
+	/**
+	*  locationManager
+	*
+	*  Field group location rules functionality 
+	*
+	*  @date	15/12/17
+	*  @since	5.7.0
+	*
+	*  @param	void
+	*  @return	void
+	*/
+	
+	var locationManager = <span class="cstat-no" title="statement not covered" >new acf.Model({</span>
+		
+		id: 'locationManager',
+		wait: 'ready',
+		
+		events: {
+			'click .add-location-rule':			'onClickAddRule',
+			'click .add-location-group':		'onClickAddGroup',
+			'click .remove-location-rule':		'onClickRemoveRule',
+			'change .refresh-location-rule':	'onChangeRemoveRule'
+		},
+		
+		initialize: <span class="fstat-no" title="function not covered" >function()</span>{
+<span class="cstat-no" title="statement not covered" >			this.$el = $('#acf-field-group-locations');</span>
+		},
+		
+		onClickAddRule: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.addRule( $el.closest('tr') );</span>
+		},
+		
+		onClickRemoveRule: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.removeRule( $el.closest('tr') );</span>
+		},
+		
+		onChangeRemoveRule: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.changeRule( $el.closest('tr') );</span>
+		},
+		
+		onClickAddGroup: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.addGroup();</span>
+		},
+		
+		addRule: <span class="fstat-no" title="function not covered" >function( </span>$tr ){
+<span class="cstat-no" title="statement not covered" >			acf.duplicate( $tr );</span>
+		},
+		
+		removeRule: <span class="fstat-no" title="function not covered" >function( </span>$tr ){
+<span class="cstat-no" title="statement not covered" >			if( $tr.siblings('tr').length == 0 ) {</span>
+<span class="cstat-no" title="statement not covered" >				$tr.closest('.rule-group').remove();</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				$tr.remove();</span>
+			}
+		},
+		
+		changeRule: <span class="fstat-no" title="function not covered" >function( </span>$rule ){
+			
+			// vars
+			var $group = <span class="cstat-no" title="statement not covered" >$rule.closest('.rule-group');</span>
+			var prefix = <span class="cstat-no" title="statement not covered" >$rule.find('td.param select').attr('name').replace('[param]', '');</span>
+			
+			// ajaxdata
+			var ajaxdata = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >			ajaxdata.action = 'acf/field_group/render_location_rule';</span>
+<span class="cstat-no" title="statement not covered" >			ajaxdata.rule = acf.serialize( $rule, prefix );</span>
+<span class="cstat-no" title="statement not covered" >			ajaxdata.rule.id = $rule.data('id');</span>
+<span class="cstat-no" title="statement not covered" >			ajaxdata.rule.group = $group.data('id');</span>
+			
+			// temp disable
+<span class="cstat-no" title="statement not covered" >			acf.disable( $rule.find('td.value') );</span>
+			
+			// ajax
+<span class="cstat-no" title="statement not covered" >			$.ajax({</span>
+				url: acf.get('ajaxurl'),
+				data: acf.prepareForAjax(ajaxdata),
+				type: 'post',
+				dataType: 'html',
+				success: <span class="fstat-no" title="function not covered" >function( </span>html ){
+<span class="cstat-no" title="statement not covered" >					if( !html ) <span class="cstat-no" title="statement not covered" >r</span>eturn;</span>
+<span class="cstat-no" title="statement not covered" >					$rule.replaceWith( html );</span>
+				}
+			});
+		},
+		
+		addGroup: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// vars
+			var $group = <span class="cstat-no" title="statement not covered" >this.$('.rule-group:last');</span>
+			
+			// duplicate
+<span class="cstat-no" title="statement not covered" >			$group2 = acf.duplicate( $group );</span>
+			
+			// update h4
+<span class="cstat-no" title="statement not covered" >			$group2.find('h4').text( acf.__('or') );</span>
+			
+			// remove all tr's except the first one
+<span class="cstat-no" title="statement not covered" >			$group2.find('tr').not(':first').remove();</span>
+		}
+	});
+	
+})(jQuery);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 28 2019 23:10:18 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

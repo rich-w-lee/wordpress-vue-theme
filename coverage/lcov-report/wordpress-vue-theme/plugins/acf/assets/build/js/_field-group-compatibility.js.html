@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for wordpress-vue-theme/plugins/acf/assets/build/js/_field-group-compatibility.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">wordpress-vue-theme/plugins/acf/assets/build/js</a> _field-group-compatibility.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/66</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function(</span>$, undefined){</span>
+	
+	var _acf = <span class="cstat-no" title="statement not covered" >acf.getCompatibility( acf );</span>
+	
+	/**
+	*  fieldGroupCompatibility
+	*
+	*  Compatibility layer for extinct acf.field_group 
+	*
+	*  @date	15/12/17
+	*  @since	5.7.0
+	*
+	*  @param	void
+	*  @return	void
+	*/
+	
+<span class="cstat-no" title="statement not covered" >	_acf.field_group = {</span>
+		
+		save_field: <span class="fstat-no" title="function not covered" >function( </span>$field, type ){
+<span class="cstat-no" title="statement not covered" >			type = (type !== undefined) ? type : 'settings';</span>
+<span class="cstat-no" title="statement not covered" >			acf.getFieldObject( $field ).save( type );</span>
+		},
+		
+		delete_field: <span class="fstat-no" title="function not covered" >function( </span>$field, animate ){
+<span class="cstat-no" title="statement not covered" >			animate = (animate !== undefined) ? animate : true;</span>
+<span class="cstat-no" title="statement not covered" >			acf.getFieldObject( $field ).delete({</span>
+				animate: animate
+			});
+		},
+		
+		update_field_meta: <span class="fstat-no" title="function not covered" >function( </span>$field, name, value ){
+<span class="cstat-no" title="statement not covered" >			acf.getFieldObject( $field ).prop( name, value );</span>
+		},
+		
+		delete_field_meta: <span class="fstat-no" title="function not covered" >function( </span>$field, name ){
+<span class="cstat-no" title="statement not covered" >			acf.getFieldObject( $field ).prop( name, null );</span>
+		}
+	};
+	
+	/**
+	*  fieldGroupCompatibility.field_object
+	*
+	*  Compatibility layer for extinct acf.field_group.field_object
+	*
+	*  @date	15/12/17
+	*  @since	5.7.0
+	*
+	*  @param	void
+	*  @return	void
+	*/
+	
+<span class="cstat-no" title="statement not covered" >	_acf.field_group.field_object = acf.model.extend({</span>
+		
+		// vars
+		type:		'',
+		o:			{},
+		$field:		null,
+		$settings:	null,
+		
+		tag: <span class="fstat-no" title="function not covered" >function( </span>tag ) {
+			
+			// vars
+			var type = <span class="cstat-no" title="statement not covered" >this.type;</span>
+			
+			
+			// explode, add 'field' and implode
+			// - open 			=&gt; open_field
+			// - change_type	=&gt; change_field_type
+			var tags = <span class="cstat-no" title="statement not covered" >tag.split('_');</span>
+<span class="cstat-no" title="statement not covered" >			tags.splice(1, 0, 'field');</span>
+<span class="cstat-no" title="statement not covered" >			tag = tags.join('_');</span>
+			
+			
+			// add type
+<span class="cstat-no" title="statement not covered" >			if( type ) {</span>
+<span class="cstat-no" title="statement not covered" >				tag += '/type=' + type;</span>
+			}
+			
+			
+			// return
+<span class="cstat-no" title="statement not covered" >			return tag;</span>
+						
+		},
+		
+		selector: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// vars
+			var selector = <span class="cstat-no" title="statement not covered" >'.acf-field-object';</span>
+			var type = <span class="cstat-no" title="statement not covered" >this.type;</span>
+			
+&nbsp;
+			// add type
+<span class="cstat-no" title="statement not covered" >			if( type ) {</span>
+<span class="cstat-no" title="statement not covered" >				selector += '-' + type;</span>
+<span class="cstat-no" title="statement not covered" >				selector = acf.str_replace('_', '-', selector);</span>
+			}
+			
+			
+			// return
+<span class="cstat-no" title="statement not covered" >			return selector;</span>
+			
+		},
+		
+		_add_action: <span class="fstat-no" title="function not covered" >function( </span>name, callback ) {
+			
+			// vars
+			var model = <span class="cstat-no" title="statement not covered" >this;</span>
+			
+			
+			// add action
+<span class="cstat-no" title="statement not covered" >			acf.add_action( this.tag(name), <span class="fstat-no" title="function not covered" >function( </span>$field ){</span>
+				
+				// focus
+<span class="cstat-no" title="statement not covered" >				model.set('$field', $field);</span>
+				
+				
+				// callback
+<span class="cstat-no" title="statement not covered" >				model[ callback ].apply(model, arguments);</span>
+				
+			});
+			
+		},
+		
+		_add_filter: <span class="fstat-no" title="function not covered" >function( </span>name, callback ) {
+			
+			// vars
+			var model = <span class="cstat-no" title="statement not covered" >this;</span>
+			
+			
+			// add action
+<span class="cstat-no" title="statement not covered" >			acf.add_filter( this.tag(name), <span class="fstat-no" title="function not covered" >function( </span>$field ){</span>
+				
+				// focus
+<span class="cstat-no" title="statement not covered" >				model.set('$field', $field);</span>
+				
+				
+				// callback
+<span class="cstat-no" title="statement not covered" >				model[ callback ].apply(model, arguments);</span>
+				
+			});
+			
+		},
+		
+		_add_event: <span class="fstat-no" title="function not covered" >function( </span>name, callback ) {
+			
+			// vars
+			var model = <span class="cstat-no" title="statement not covered" >this;</span>
+			var event = <span class="cstat-no" title="statement not covered" >name.substr(0,name.indexOf(' '));</span>
+			var selector = <span class="cstat-no" title="statement not covered" >name.substr(name.indexOf(' ')+1);</span>
+			var context = <span class="cstat-no" title="statement not covered" >this.selector();</span>
+			
+			
+			// add event
+<span class="cstat-no" title="statement not covered" >			$(document).on(event, context + ' ' + selector, <span class="fstat-no" title="function not covered" >function( </span>e ){</span>
+				
+				// append $el to event object
+<span class="cstat-no" title="statement not covered" >				e.$el = $(this);</span>
+<span class="cstat-no" title="statement not covered" >				e.$field = e.$el.closest('.acf-field-object');</span>
+				
+				
+				// focus
+<span class="cstat-no" title="statement not covered" >				model.set('$field', e.$field);</span>
+				
+				
+				// callback
+<span class="cstat-no" title="statement not covered" >				model[ callback ].apply(model, [e]);</span>
+				
+			});
+			
+		},
+		
+		_set_$field: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// vars
+<span class="cstat-no" title="statement not covered" >			this.o = this.$field.data();</span>
+			
+			
+			// els
+<span class="cstat-no" title="statement not covered" >			this.$settings = this.$field.find('&gt; .settings &gt; table &gt; tbody');</span>
+			
+			
+			// focus
+<span class="cstat-no" title="statement not covered" >			this.focus();</span>
+			
+		},
+		
+		focus: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// do nothing
+			
+		},
+		
+		setting: <span class="fstat-no" title="function not covered" >function( </span>name ) {
+			
+<span class="cstat-no" title="statement not covered" >			return this.$settings.find('&gt; .acf-field-setting-' + name);</span>
+			
+		}
+		
+	});
+	
+	
+	/*
+	*  field
+	*
+	*  This model fires actions and filters for registered fields
+	*
+	*  @type	function
+	*  @date	21/02/2014
+	*  @since	3.5.1
+	*
+	*  @param	n/a
+	*  @return	n/a
+	*/
+	
+	var actionManager = <span class="cstat-no" title="statement not covered" >new acf.Model({</span>
+		
+		actions: {
+			'open_field_object': 			'onOpenFieldObject',
+			'close_field_object': 			'onCloseFieldObject',
+			'add_field_object': 			'onAddFieldObject',
+			'duplicate_field_object': 		'onDuplicateFieldObject',
+			'delete_field_object': 			'onDeleteFieldObject',
+			'change_field_object_type': 	'onChangeFieldObjectType',
+			'change_field_object_label': 	'onChangeFieldObjectLabel',
+			'change_field_object_name': 	'onChangeFieldObjectName',
+			'change_field_object_parent': 	'onChangeFieldObjectParent',
+			'sortstop_field_object':		'onChangeFieldObjectParent'
+		},
+		
+		onOpenFieldObject: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('open_field', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('open_field/type=' + field.get('type'), field.$el);</span>
+			
+<span class="cstat-no" title="statement not covered" >			acf.doAction('render_field_settings', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('render_field_settings/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onCloseFieldObject: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('close_field', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('close_field/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onAddFieldObject: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('add_field', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('add_field/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onDuplicateFieldObject: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('duplicate_field', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('duplicate_field/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onDeleteFieldObject: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('delete_field', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('delete_field/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onChangeFieldObjectType: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('change_field_type', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('change_field_type/type=' + field.get('type'), field.$el);</span>
+			
+<span class="cstat-no" title="statement not covered" >			acf.doAction('render_field_settings', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('render_field_settings/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onChangeFieldObjectLabel: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('change_field_label', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('change_field_label/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onChangeFieldObjectName: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('change_field_name', field.$el);</span>
+<span class="cstat-no" title="statement not covered" >			acf.doAction('change_field_name/type=' + field.get('type'), field.$el);</span>
+		},
+		
+		onChangeFieldObjectParent: <span class="fstat-no" title="function not covered" >function( </span>field ){
+<span class="cstat-no" title="statement not covered" >			acf.doAction('update_field_parent', field.$el);</span>
+		}
+	});
+	
+})(jQuery);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 28 2019 23:10:18 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

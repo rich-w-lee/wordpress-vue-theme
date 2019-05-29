@@ -1,4 +1,11 @@
 module.exports = {
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{js,vue}',
+    '!src/main.js',
+    '!src/router.js',
+    '!src/store/index.js',
+  ],
   moduleFileExtensions: [
     'js',
     'jsx',
@@ -20,4 +27,5 @@ module.exports = {
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)',
   ],
   testURL: 'http://localhost/',
+  testPathIgnorePatterns: [],
 };

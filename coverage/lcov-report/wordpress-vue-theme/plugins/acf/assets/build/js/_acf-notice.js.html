@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for wordpress-vue-theme/plugins/acf/assets/build/js/_acf-notice.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">wordpress-vue-theme/plugins/acf/assets/build/js</a> _acf-notice.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function(</span>$, undefined){</span>
+	
+	var Notice = <span class="cstat-no" title="statement not covered" >acf.Model.extend({</span>
+		
+		data: {
+			text: '',
+			type: '',
+			timeout: 0,
+			dismiss: true,
+			target: false,
+			close: <span class="fstat-no" title="function not covered" >function()</span>{}
+		},
+		
+		events: {
+			'click .acf-notice-dismiss': 'onClickClose',
+		},
+		
+		tmpl: <span class="fstat-no" title="function not covered" >function()</span>{
+<span class="cstat-no" title="statement not covered" >			return '&lt;div class="acf-notice"&gt;&lt;/div&gt;';</span>
+		},
+		
+		setup: <span class="fstat-no" title="function not covered" >function( </span>props ){
+<span class="cstat-no" title="statement not covered" >			$.extend(this.data, props);</span>
+<span class="cstat-no" title="statement not covered" >			this.$el = $(this.tmpl());</span>
+		},
+		
+		initialize: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// render
+<span class="cstat-no" title="statement not covered" >			this.render();</span>
+			
+			// show
+<span class="cstat-no" title="statement not covered" >			this.show();</span>
+		},
+		
+		render: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// class
+<span class="cstat-no" title="statement not covered" >			this.type( this.get('type') );</span>
+			
+			// text
+<span class="cstat-no" title="statement not covered" >			this.html( '&lt;p&gt;' + this.get('text') + '&lt;/p&gt;' );</span>
+			
+			// close
+<span class="cstat-no" title="statement not covered" >			if( this.get('dismiss') ) {</span>
+<span class="cstat-no" title="statement not covered" >				this.$el.append('&lt;a href="#" class="acf-notice-dismiss acf-icon -cancel small"&gt;&lt;/a&gt;');</span>
+<span class="cstat-no" title="statement not covered" >				this.$el.addClass('-dismiss');</span>
+			}
+			
+			// timeout
+			var timeout = <span class="cstat-no" title="statement not covered" >this.get('timeout');</span>
+<span class="cstat-no" title="statement not covered" >			if( timeout ) {</span>
+<span class="cstat-no" title="statement not covered" >				this.away( timeout );</span>
+			}
+		},
+		
+		update: <span class="fstat-no" title="function not covered" >function( </span>props ){
+			
+			// update
+<span class="cstat-no" title="statement not covered" >			$.extend(this.data, props);</span>
+			
+			// re-initialize
+<span class="cstat-no" title="statement not covered" >			this.initialize();</span>
+			
+			// refresh events
+<span class="cstat-no" title="statement not covered" >			this.removeEvents();</span>
+<span class="cstat-no" title="statement not covered" >			this.addEvents();</span>
+		},
+		
+		show: <span class="fstat-no" title="function not covered" >function()</span>{
+			var $target = <span class="cstat-no" title="statement not covered" >this.get('target');</span>
+<span class="cstat-no" title="statement not covered" >			if( $target ) {</span>
+<span class="cstat-no" title="statement not covered" >				$target.prepend( this.$el );</span>
+			}
+		},
+		
+		hide: <span class="fstat-no" title="function not covered" >function()</span>{
+<span class="cstat-no" title="statement not covered" >			this.$el.remove();</span>
+		},
+		
+		away: <span class="fstat-no" title="function not covered" >function( </span>timeout ){
+<span class="cstat-no" title="statement not covered" >			this.setTimeout(<span class="fstat-no" title="function not covered" >function()</span>{</span>
+<span class="cstat-no" title="statement not covered" >				acf.remove( this.$el );</span>
+			}, timeout );
+		},
+		
+		type: <span class="fstat-no" title="function not covered" >function( </span>type ){
+			
+			// remove prev type
+			var prevType = <span class="cstat-no" title="statement not covered" >this.get('type');</span>
+<span class="cstat-no" title="statement not covered" >			if( prevType ) {</span>
+<span class="cstat-no" title="statement not covered" >				this.$el.removeClass('-' + prevType);</span>
+			}
+			
+			// add new type
+<span class="cstat-no" title="statement not covered" >			this.$el.addClass('-' + type);</span>
+			
+			// backwards compatibility
+<span class="cstat-no" title="statement not covered" >			if( type == 'error' ) {</span>
+<span class="cstat-no" title="statement not covered" >				this.$el.addClass('acf-error-message');</span>
+			}
+		},
+		
+		html: <span class="fstat-no" title="function not covered" >function( </span>html ){
+<span class="cstat-no" title="statement not covered" >			this.$el.html( html );</span>
+		},
+		
+		text: <span class="fstat-no" title="function not covered" >function( </span>text ){
+<span class="cstat-no" title="statement not covered" >			this.$('p').html( text );</span>
+		},
+		
+		onClickClose: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >			this.get('close').apply(this, arguments);</span>
+<span class="cstat-no" title="statement not covered" >			this.remove();</span>
+		}
+	});
+	
+<span class="cstat-no" title="statement not covered" >	acf.newNotice = <span class="fstat-no" title="function not covered" >function( </span>props ){</span>
+		
+		// ensure object
+<span class="cstat-no" title="statement not covered" >		if( typeof props !== 'object' ) {</span>
+<span class="cstat-no" title="statement not covered" >			props = { text: props };</span>
+		}
+		
+		// instantiate
+<span class="cstat-no" title="statement not covered" >		return new Notice( props );</span>
+	};
+	
+	var noticeManager = <span class="cstat-no" title="statement not covered" >new acf.Model({</span>
+		wait: 'prepare',
+		priority: 1,
+		initialize: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// vars
+			var $notice = <span class="cstat-no" title="statement not covered" >$('.acf-admin-notice');</span>
+			
+			// move to avoid WP flicker
+<span class="cstat-no" title="statement not covered" >			if( $notice.length ) {</span>
+<span class="cstat-no" title="statement not covered" >				$('h1:first').after( $notice );</span>
+			}
+		}	 
+	});
+	
+	
+})(jQuery);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 28 2019 23:10:18 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ import HttpClient from '../utils/HttpClient';
 const http = new HttpClient();
 
 export default {
-  getPosts(context) {
+  getPosts (context) {
     http.get('posts')
       .then((res) => {
         context.commit('updatePosts', res.data);
@@ -12,5 +12,5 @@ export default {
       .catch((e) => {
         console.error(e);
       });
-  }
+  },
 };

@@ -1,3 +1,3 @@
 export default {
-  updatePosts: (state, posts) => state.posts = posts,
+  updatePosts: (state, posts) => { state.posts = posts; },
 };

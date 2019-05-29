@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for wordpress-vue-theme/plugins/acf/assets/build/js/_acf-field-image.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">wordpress-vue-theme/plugins/acf/assets/build/js</a> _acf-field-image.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function(</span>$, undefined){</span>
+	
+	var Field = <span class="cstat-no" title="statement not covered" >acf.Field.extend({</span>
+		
+		type: 'image',
+		
+		$control: <span class="fstat-no" title="function not covered" >function()</span>{
+<span class="cstat-no" title="statement not covered" >			return this.$('.acf-image-uploader');</span>
+		},
+		
+		$input: <span class="fstat-no" title="function not covered" >function()</span>{
+<span class="cstat-no" title="statement not covered" >			return this.$('input[type="hidden"]');</span>
+		},
+		
+		events: {
+			'click a[data-name="add"]': 	'onClickAdd',
+			'click a[data-name="edit"]': 	'onClickEdit',
+			'click a[data-name="remove"]':	'onClickRemove',
+			'change input[type="file"]':	'onChange'
+		},
+		
+		initialize: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// add attribute to form
+<span class="cstat-no" title="statement not covered" >			if( this.get('uploader') === 'basic' ) {</span>
+<span class="cstat-no" title="statement not covered" >				this.$el.closest('form').attr('enctype', 'multipart/form-data');</span>
+			}
+		},
+		
+		validateAttachment: <span class="fstat-no" title="function not covered" >function( </span>attachment ){
+			
+			// defaults
+<span class="cstat-no" title="statement not covered" >			attachment = attachment || {};</span>
+			
+			// WP attachment
+<span class="cstat-no" title="statement not covered" >			if( attachment.id !== undefined ) {</span>
+<span class="cstat-no" title="statement not covered" >				attachment = attachment.attributes;</span>
+			}
+			
+			// args
+<span class="cstat-no" title="statement not covered" >			attachment = acf.parseArgs(attachment, {</span>
+				url: '',
+				alt: '',
+				title: '',
+				caption: '',
+				description: '',
+				width: 0,
+				height: 0
+			});
+			
+			// preview size
+			var url = <span class="cstat-no" title="statement not covered" >acf.isget(attachment, 'sizes', this.get('preview_size'), 'url');</span>
+<span class="cstat-no" title="statement not covered" >			if( url !== null ) {</span>
+<span class="cstat-no" title="statement not covered" >				attachment.url = url;</span>
+			}
+			
+			// return
+<span class="cstat-no" title="statement not covered" >			return attachment;</span>
+		},
+		
+		render: <span class="fstat-no" title="function not covered" >function( </span>attachment ){
+			
+			// vars
+<span class="cstat-no" title="statement not covered" >			attachment = this.validateAttachment( attachment );</span>
+			
+			// update image
+<span class="cstat-no" title="statement not covered" >		 	this.$('img').attr({</span>
+			 	src: attachment.url,
+			 	alt: attachment.alt,
+			 	title: attachment.title
+		 	});
+		 	
+			// vars
+			var val = <span class="cstat-no" title="statement not covered" >attachment.id || '';</span>
+						
+			// update val
+<span class="cstat-no" title="statement not covered" >			this.val( val );</span>
+		 	
+		 	// update class
+<span class="cstat-no" title="statement not covered" >		 	if( val ) {</span>
+<span class="cstat-no" title="statement not covered" >			 	this.$control().addClass('has-value');</span>
+		 	} else {
+<span class="cstat-no" title="statement not covered" >			 	this.$control().removeClass('has-value');</span>
+		 	}
+		},
+		
+		// create a new repeater row and render value
+		append: <span class="fstat-no" title="function not covered" >function( </span>attachment, parent ){
+			
+			// create function to find next available field within parent
+			var getNext = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function( </span>field, parent ){</span>
+				
+				// find existing file fields within parent
+				var fields = <span class="cstat-no" title="statement not covered" >acf.getFields({</span>
+					key: 	field.get('key'),
+					parent: parent.$el
+				});
+				
+				// find the first field with no value
+<span class="cstat-no" title="statement not covered" >				for( var i = 0; i &lt; fields.length; i++ ) {</span>
+<span class="cstat-no" title="statement not covered" >					if( !fields[i].val() ) {</span>
+<span class="cstat-no" title="statement not covered" >						return fields[i];</span>
+					}
+				}
+								
+				// return
+<span class="cstat-no" title="statement not covered" >				return false;</span>
+			}
+			
+			// find existing file fields within parent
+			var field = <span class="cstat-no" title="statement not covered" >getNext( this, parent );</span>
+			
+			// add new row if no available field
+<span class="cstat-no" title="statement not covered" >			if( !field ) {</span>
+<span class="cstat-no" title="statement not covered" >				parent.$('.acf-button:last').trigger('click');</span>
+<span class="cstat-no" title="statement not covered" >				field = getNext( this, parent );</span>
+			}
+					
+			// render
+<span class="cstat-no" title="statement not covered" >			if( field ) {</span>
+<span class="cstat-no" title="statement not covered" >				field.render( attachment );</span>
+			}
+		},
+		
+		selectAttachment: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// vars
+			var parent = <span class="cstat-no" title="statement not covered" >this.parent();</span>
+			var multiple = (<span class="cstat-no" title="statement not covered" >parent &amp;&amp; parent.get('type') === 'repeater');</span>
+			
+			// new frame
+			var frame = <span class="cstat-no" title="statement not covered" >acf.newMediaPopup({</span>
+				mode:			'select',
+				type:			'image',
+				title:			acf.__('Select Image'),
+				field:			this.get('key'),
+				multiple:		multiple,
+				library:		this.get('library'),
+				allowedTypes:	this.get('mime_types'),
+				select:			$.proxy(<span class="fstat-no" title="function not covered" >function( </span>attachment, i ) {
+<span class="cstat-no" title="statement not covered" >					if( i &gt; 0 ) {</span>
+<span class="cstat-no" title="statement not covered" >						this.append( attachment, parent );</span>
+					} else {
+<span class="cstat-no" title="statement not covered" >						this.render( attachment );</span>
+					}
+				}, this)
+			});
+		},
+		
+		editAttachment: <span class="fstat-no" title="function not covered" >function()</span>{
+			
+			// vars
+			var val = <span class="cstat-no" title="statement not covered" >this.val();</span>
+			
+			// bail early if no val
+<span class="cstat-no" title="statement not covered" >			if( !val ) <span class="cstat-no" title="statement not covered" >r</span>eturn;</span>
+			
+			// popup
+			var frame = <span class="cstat-no" title="statement not covered" >acf.newMediaPopup({</span>
+				mode:		'edit',
+				title:		acf.__('Edit Image'),
+				button:		acf.__('Update Image'),
+				attachment:	val,
+				field:		this.get('key'),
+				select:		$.proxy(<span class="fstat-no" title="function not covered" >function( </span>attachment, i ) {
+<span class="cstat-no" title="statement not covered" >					this.render( attachment );</span>
+				}, this)
+			});
+		},
+		
+		removeAttachment: <span class="fstat-no" title="function not covered" >function()</span>{
+<span class="cstat-no" title="statement not covered" >	        this.render( false );</span>
+		},
+		
+		onClickAdd: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.selectAttachment();</span>
+		},
+		
+		onClickEdit: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.editAttachment();</span>
+		},
+		
+		onClickRemove: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+<span class="cstat-no" title="statement not covered" >			this.removeAttachment();</span>
+		},
+		
+		onChange: <span class="fstat-no" title="function not covered" >function( </span>e, $el ){
+			var $hiddenInput = <span class="cstat-no" title="statement not covered" >this.$input();</span>
+			
+<span class="cstat-no" title="statement not covered" >			acf.getFileInputData($el, <span class="fstat-no" title="function not covered" >function( </span>data ){</span>
+<span class="cstat-no" title="statement not covered" >				$hiddenInput.val( $.param(data) );</span>
+			});
+		}
+	});
+	
+<span class="cstat-no" title="statement not covered" >	acf.registerFieldType( Field );</span>
+&nbsp;
+})(jQuery);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 28 2019 23:10:18 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

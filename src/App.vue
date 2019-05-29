@@ -13,11 +13,11 @@ export default {
   computed: {
     ...mapGetters(['themeData']),
   },
-  created() {
+  created () {
     this.getPosts();
   },
   methods: {
     ...mapActions(['getPosts']),
-  }
+  },
 };
 </script>

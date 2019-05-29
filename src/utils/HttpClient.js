@@ -3,7 +3,7 @@ import axios from 'axios';
 export default class HttpClient {
   API_BASE_PATH = '/wp-json/wp/v2';
 
-  constructor() {
+  constructor () {
     try {
       axios.defaults.headers.common = {
         'X-CSRF-TOKEN': typeof window.WordPress !== 'undefined' ? window.WordPress.csrfToken : '',
