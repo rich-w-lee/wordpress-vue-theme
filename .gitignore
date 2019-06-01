@@ -353,3 +353,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Test Coverage
+coverage/*

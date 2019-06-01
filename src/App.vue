@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     This is your theme data, use it wisely!
     <br>
     {{ themeData }}
