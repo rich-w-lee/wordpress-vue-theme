@@ -1,7 +1,11 @@
 /*
-Theme Name: vue-wordpress
+Theme Name: wordpress-vue-theme
 Author: Richard Lee
 Author URI: leerichardw.com
 Description:
-Version: 0.0.1
+Version: 1.0.0
 */
+
+#SEO {
+  visibility: hidden;
+}
