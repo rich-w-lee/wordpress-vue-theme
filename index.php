@@ -9,6 +9,7 @@
 </head>
 <body>
   <div id="app"></div>
+  <div id="SEO"><!-- Put SEO keywords here--></div>
   <?php wp_footer(); ?>
 </body>
 </html>

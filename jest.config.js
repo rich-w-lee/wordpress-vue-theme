@@ -28,4 +28,5 @@ module.exports = {
   ],
   testURL: 'http://localhost/',
   testPathIgnorePatterns: [],
+  setupFiles: ['<rootDir>/jest.init.js'],
 };

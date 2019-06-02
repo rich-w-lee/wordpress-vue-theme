@@ -1,13 +1,14 @@
 {
   "name": "wordpress-vue-theme",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=development webpack --progress --hide-modules",
     "build:watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
     "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "lint": "vue-cli-service lint --no-fix",
-    "test": "vue-cli-service test:unit"
+    "test": "vue-cli-service test:unit",
+    "package": "sh scripts/package.sh"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
