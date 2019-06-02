@@ -1,6 +1,6 @@
 # Wordpress-Vue-Theme
+A starter template for a wordpress theme built on Vue.js  
 ![Vue Wordpress Logo](/screenshot.png?raw=true "Vue Wordpress Logo")
-A starter template for a wordpress theme built on Vue.js
 
 ### Audience 
 
